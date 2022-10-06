@@ -1,9 +1,10 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import Home from '../Home'
-import Book from '../Book'
-import About from '../About'
+import Home from '../Home';
+import Books from "../Books";
+import About from '../About';
+import BookDetails from '../BookDetails';
 
 export const routes = createBrowserRouter([
     {
@@ -19,13 +20,23 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: 'book',
-                element: <Book></Book>
+                path: 'books',
+                loader: async ()=>{
+                    return fetch('https://api.itbook.store/1.0/new')
+                },
+                element: <Books></Books>
             },
             {
                 path: 'about',
                 element: <About></About>
             },
+            {
+                path:'book/:id',
+                loader: async({params}) => {
+                    return fetch(`https://api.itbook.store/1.0/books/${params.id}`)
+                },
+                element: <BookDetails></BookDetails>
+            }
         ]
     },
     {
