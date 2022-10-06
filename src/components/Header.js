@@ -91,8 +91,8 @@ const Header = () => {
                 <div className='p-5 bg-white border rounded shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                     <div>
-                      <a
-                        href='/'
+                      <NavLink
+                        to='/'
                         aria-label='proReader'
                         title='proReader'
                         className='inline-flex items-center'
@@ -115,7 +115,7 @@ const Header = () => {
                         <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                           proReader
                         </span>
-                      </a>
+                      </NavLink>
                     </div>
                     <div>
                       <button
@@ -136,34 +136,34 @@ const Header = () => {
                   <nav>
                     <ul className='space-y-4'>
                       <li>
-                        <a
-                          href='/'
+                        <NavLink
+                          to='/'
                           aria-label='Home'
                           title='Home'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                           Home
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href='/books'
+                        <NavLink
+                          to='/books'
                           aria-label='Books'
                           title='Books'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                           Books
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href='/about'
+                        <NavLink
+                         to='/about'
                           aria-label='About Us'
                           title='About Us'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                           About Us
-                        </a>
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>
